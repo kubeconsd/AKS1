@@ -37,7 +37,7 @@ jobs:
         container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
         container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         secret-name: demo-k8s-secret
-        namespace: aksdemo
+        namespace: ${{env.NAMESPACE}}
     
     # Deploy app to AKS
     - uses: azure/k8s-deploy@v1
