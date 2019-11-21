@@ -25,7 +25,7 @@ jobs:
       with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
         cluster-name: kubeconsd1
-        resource-group: kubeconsd1
+        resource-group: kubeconsd1-sree
     
     - run: |
         kubectl create namespace ${{env.NAMESPACE}} --dry-run -o json | kubectl apply -f -
